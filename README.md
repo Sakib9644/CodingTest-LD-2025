@@ -5,8 +5,6 @@
 ### Register
 POST /api/register
 
-**Body (JSON):**
-```json
 {
   "name": "John Doe",
   "email": "john@example.com",
