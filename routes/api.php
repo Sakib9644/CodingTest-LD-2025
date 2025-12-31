@@ -3,4 +3,12 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
-use App\Http\Controllers\Api\ShortenUrlController;
+
+
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
+Route::middleware('auth:sanctum')->group(function () {
+        Route::post('/shorten', [App\Http\Controllers\Api\ShortenUrlController::class, 'store']);
+});
+
+// Route::get('/{shortCode}', [ShortenUrlController::class, 'redirect']);
