@@ -3,10 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\ShortenedUrl;
+use App\Models\ShortUrl;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ShortenUrlController extends Controller
 {
+
+   
     public function redirectToOriginal($shortCode)
     {
         // Find the short URL in the database

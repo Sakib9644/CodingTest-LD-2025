@@ -9,6 +9,8 @@ class ShortenedUrl extends Model
 {
     use HasFactory;
 
+    protected $table = 'shortened_urls'; // string, not array
+
     protected $fillable = ['user_id', 'original_url', 'short_code'];
 
     public function user()
