@@ -2,7 +2,6 @@
 
 ## Authentication
 
-### Register
 POST /api/register
 
 {
