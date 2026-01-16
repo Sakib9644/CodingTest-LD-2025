@@ -11,4 +11,3 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('/shorten', [App\Http\Controllers\Api\ShortenUrlController::class, 'store']);
 });
 
-// Route::get('/{shortCode}', [ShortenUrlController::class, 'redirect']);
